@@ -1,26 +1,47 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+        <v-header />
+        <v-cart />
+        <v-swiper />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import vCart from "@/components/v-cart.vue";
+import vSwiper from "@/components/v-swiper.vue";
+import vHeader from "./components/v-header.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    components: {
+        vCart,
+        vSwiper,
+        vHeader,
+    },
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color1: #1f2432;
+    --main-color2: #797b86;
+    color: var(--main-color1);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    li {
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto 100px;
 }
 </style>
